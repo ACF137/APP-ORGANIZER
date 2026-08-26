@@ -1,0 +1,107 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:ACF_APP"
+    xmlns:Setup="clr-namespace:ACF137.Setup"
+    xmlns:Controls="clr-namespace:ACF_APP.Controls"
+    xmlns:UI="clr-namespace:ACF_APP.UI"
+    x:Class="ACF_APP.MainWindow"
+    mc:Ignorable="d"
+    Height="480"
+    Width="800"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    Background="Transparent"
+    AllowsTransparency="True"
+
+    
+    MouseLeftButtonDown="Window_MouseLeftButtonDown" 
+    
+    WindowStyle="None">
+    <!-- удаление панели Win -->
+
+    
+
+
+    <Grid Background="Black" Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+
+        <!-- Внешняя рамка -->
+        <Rectangle 
+            
+            Grid.RowSpan="3"
+            Stroke="#8F0030"
+            StrokeThickness="1">
+
+            <Rectangle.Effect>
+                <DropShadowEffect
+            Color="Red"
+            BlurRadius="65"
+            ShadowDepth="0"
+            Opacity="1"/>
+            </Rectangle.Effect>
+
+        </Rectangle>
+
+
+        <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+        <Rectangle Grid.Row="0" Height="1" VerticalAlignment="Bottom" Fill="#8F0030">
+            <Rectangle.Effect>
+                <DropShadowEffect
+            Color="Red"
+            BlurRadius="65"
+            ShadowDepth="6"
+            Opacity="1" Direction="315"/>
+            </Rectangle.Effect>
+
+        </Rectangle>
+
+        <Setup:CyberLabel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Text="ACF APP ORGANIZER" Tag="NoDrag"/>
+        <Setup:C_Delete Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Tag="NoDrag"/>
+        <UI:Minimize Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,32,0" Tag="NoDrag"/>
+        <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+
+        <!-- ЦЕНТР -->
+        <ScrollViewer
+    Grid.Row="1"
+    HorizontalScrollBarVisibility="Disabled"
+    VerticalScrollBarVisibility="Hidden" Margin="0,10,0,10">
+
+            <WrapPanel x:Name="ApplicationsPanel" HorizontalAlignment="Center" VerticalAlignment="Top" Width="750" ItemWidth="150" ItemHeight="165"/>
+
+        </ScrollViewer>
+        <!-- ЦЕНТР -->
+
+        <!-- Здесь позже будут приложения -->
+
+
+        <!-- НИЖНЯЯ ПАНЕЛЬ -->
+        <Rectangle Grid.Row="2" Height="1" VerticalAlignment="Top" Fill="#8F0030">
+            <Rectangle.Effect>
+                <DropShadowEffect
+            Color="Red"
+            BlurRadius="65"
+            ShadowDepth="0"
+            Opacity="1"/>
+            </Rectangle.Effect>
+
+        </Rectangle>
+
+        <Setup:CyberButtonSmal Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,1,0,0" Text="+ADD" Tag="NoDrag" Click="ADD_Click"/>
+        <Setup:CyberButtonSmal Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="115,1,0,0" Text="CMD" Tag="NoDrag" Click = "CMD_Click"/>
+
+        <Setup:CyberButtonSmal Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="660,0,0,0" Text="GitHub" Tag="NoDrag" Click = "GitHub_Click"/>
+        <Setup:CyberButtonSmal Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="220,0,0,0" Text="A-START" Tag="NoDrag" Click = "AutoStart_Click"/>
+        <!-- НИЖНЯЯ ПАНЕЛЬ -->
+        
+
+    </Grid>
+
+</Window>

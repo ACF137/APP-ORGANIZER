@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>ACF_APP</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+
+	  <ApplicationManifest>app.manifest</ApplicationManifest>
+	  <ApplicationIcon>UI\Image\ACF_OR.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UI\Image\Kotik.png" />
+    <None Remove="UI\Image\Minimize_R.png" />
+    <None Remove="UI\Image\Minimize_W.png" />
+    <None Remove="UI\Image\R_Delete.png" />
+    <None Remove="UI\Image\W_Delete.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="10.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Image\Kotik.png" />
+    <Resource Include="UI\Image\Minimize_R.png" />
+    <Resource Include="UI\Image\Minimize_W.png" />
+    <Resource Include="UI\Image\R_Delete.png" />
+    <Resource Include="UI\Image\W_Delete.png" />
+  </ItemGroup>
+
+</Project>
