@@ -35,7 +35,7 @@ Choose **one** of the following installation methods from the Releases page:
 ### Method 2: Lightweight Installer (~3 MB)
 * Traditional setup wizard that installs the app into `Program Files`
 * Does not include the .NET 8 runtime
-* Requires [.NET 8.0 Desktop Runtime](https://microsoft.com) to be installed on your system
+* Requires [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/ru-ru/download/dotnet/8.0) to be installed on your system
 
 ## Changelog
 
